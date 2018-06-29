@@ -78,8 +78,8 @@ public class Firework{
 			//6. Set the color to the spark's color with g.setColor()
 			//7. Fill in an oval using the spark's x, y, and size with g.fillOval()
 		for (int i = 0; i < sparks.length; i++) {
-			g.setColor(Color.BLUE);
-			g.fillOval(sparks[i].x, sparks[i].y, 70, 70);
+			g.setColor(sparks[i].color);
+			g.fillOval(sparks[i].x, sparks[i].y, sparks[i].size, sparks[i].size);
 		}
 	}
 }
