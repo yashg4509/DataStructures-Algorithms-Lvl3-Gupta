@@ -59,8 +59,7 @@ public class _02_GuestBook implements ActionListener {
 		
 		else if(e.getSource() == viewNames) {
 			for(int i = 0; i < guestNames.size(); i++) {
-				String x = "Guest #" + (i+1) + ": " + guestNames.get(i);
-				JOptionPane.showMessageDialog(null, x);
+				JOptionPane.showMessageDialog(null, "Guest #" + (i+1) + ": " + guestNames.get(i));
 			}
 		}
 		
