@@ -23,9 +23,7 @@ public class DynamicIntegerArray {
 		//   copy every element from the member array 
 		//   to the new array
 		for (int i = 0; i < intArray.length; i++) {
-			for (int j = 0; j < new_array.length; j++) {
-				intArray[i] = new_array[j];
-			} 
+			new_array[i] = intArray[i];
 		}
 		
 		//D. set the member array equal to the new array.
