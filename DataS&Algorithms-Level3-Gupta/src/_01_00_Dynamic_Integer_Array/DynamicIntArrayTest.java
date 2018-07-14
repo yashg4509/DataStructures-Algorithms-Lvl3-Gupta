@@ -1,9 +1,9 @@
 package _01_00_Dynamic_Integer_Array;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
+
 class DynamicIntArrayTest {
 
 	@Test

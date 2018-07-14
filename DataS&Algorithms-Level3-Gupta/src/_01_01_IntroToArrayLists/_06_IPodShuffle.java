@@ -1,12 +1,11 @@
 package _01_01_IntroToArrayLists;
 
-<<<<<<< HEAD
+
 import java.awt.event.ActionEvent;
-=======
+
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 
->>>>>>> b8f460a5e2fdbcdf4024c2a090395a4d5dc0e7b5
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Random;
@@ -19,17 +18,9 @@ import javax.swing.JPanel;
 //Copyright The League of Amazing Programmers, 2015
 
 public class _06_IPodShuffle implements ActionListener{
-<<<<<<< HEAD
-	public _06_IPodShuffle() {
-		// 1. Use the Song class the play the demo.mp3 file.
-		Song sPlayer = new Song("/demo.mp3");
-		sPlayer.play();
-		
-				
-=======
 		JFrame frame = new JFrame();
 		JPanel pnl = new JPanel();
-		JButton supriseBtn = new JButton("Suprise Me!");
+		JButton supriseMe = new JButton("Suprise Me!");
 		ArrayList<Song> songs = new ArrayList<>();
 		Song pythonIsGay;
 
@@ -38,7 +29,6 @@ public class _06_IPodShuffle implements ActionListener{
 				
 		this.createInterface();
 		this.addSongs();
->>>>>>> b8f460a5e2fdbcdf4024c2a090395a4d5dc0e7b5
 		/**
 		 * 2. Congratulations on completing the sound check! * Now we want to make an
 		 * iPod Shuffle that plays random music. * Create an ArrayList of Songs and a
@@ -47,15 +37,10 @@ public class _06_IPodShuffle implements ActionListener{
 		 * subsequent button clicks.
 		 */
 		ArrayList<Song> songs = new ArrayList<>();
-		JFrame frame = new JFrame();
-		JPanel pnl = new JPanel();
-		JButton supriseMe = new JButton("Suprise Me!");
-		
+
 		supriseMe.addActionListener(this);
 		pnl.add(supriseMe);
 		frame.add(pnl);
-		
-		if(e.getSource == )
 	}
 	
 	public void addSongs() {
@@ -74,8 +59,8 @@ public class _06_IPodShuffle implements ActionListener{
 		
 		frame.setSize(new Dimension(800, 600));
 		frame.add(pnl);
-		supriseBtn.addActionListener(this);
-		pnl.add(supriseBtn);
+		supriseMe.addActionListener(this);
+		pnl.add(supriseMe);
 		frame.pack();
 		
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -87,17 +72,9 @@ public class _06_IPodShuffle implements ActionListener{
 		new _06_IPodShuffle();
 	}
 
-	@Override
-<<<<<<< HEAD
-	public void actionPerformed(ActionEvent arg0) {
-		// TODO Auto-generated method stub
-		
-	}
-}
-=======
 	public void actionPerformed(ActionEvent e) {
 		Random r = new Random();
-		if(e.getSource() == supriseBtn) {
+		if(e.getSource() == supriseMe) {
 			if(pythonIsGay != null) {
 				pythonIsGay.stop();
 			}
@@ -107,4 +84,4 @@ public class _06_IPodShuffle implements ActionListener{
 			}
 		}
 	}
->>>>>>> b8f460a5e2fdbcdf4024c2a090395a4d5dc0e7b5
+

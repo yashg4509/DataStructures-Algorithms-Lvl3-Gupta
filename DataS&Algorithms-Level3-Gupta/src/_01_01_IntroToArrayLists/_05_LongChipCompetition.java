@@ -37,9 +37,7 @@ public class _05_LongChipCompetition {
 			}
 		}
 		System.out.println(fatty);
-		
-		lcc.initializeBeatles();
-		
+				
 	}
 	
 	private void initializeBeatles() {
