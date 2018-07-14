@@ -16,6 +16,27 @@ public class _05_LongChipCompetition {
 
 	public static void main(String[] args) {
 		_05_LongChipCompetition lcc = new _05_LongChipCompetition();
+		lcc.initializeBeatles();
+		lcc.longChipCompetition();
+	}
+	
+	public void longChipCompetition(){
+		double chipBest = 0;
+		String fatty = "";
+		for (int i = 0; i < theBeatles.size(); i++) {
+			Beatle beatlePos = theBeatles.get(i);
+			ArrayList<Chip> chips = beatlePos.getChips();
+			
+			for (int j = 0; j < chips.size(); j++) {
+				Chip x = chips.get(i);
+				
+				if(x.getLength() > chipBest) {
+					chipBest = x.getLength();
+					fatty = beatlePos.getName();
+				}
+			}
+		}
+		System.out.println(fatty);
 		
 		lcc.initializeBeatles();
 		
