@@ -1,3 +1,4 @@
+
 package _01_00_Dynamic_Integer_Array;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -71,5 +72,4 @@ class DynamicIntArrayTest {
 		dia.clear();
 		assertEquals(0, dia.size());
 	}
-	
 }

@@ -14,7 +14,7 @@ public class _01_IntroToStack {
 		Stack<Double> intro = new Stack<>();
 		//2. Use a loop to push 100 random doubles between 0 and 100 to the Stack.
 		for (int i = 0; i < 101; i++) {
-			intro.push(r.nextDouble());
+			intro.push(r.nextDouble()*100);
 		}
 		//3. Ask the user to enter in two numbers between 0 and 100, inclusive. 
 		String res1 = JOptionPane.showInputDialog("Enter a number between 0 to 100 (inclusive)");
@@ -24,16 +24,13 @@ public class _01_IntroToStack {
 		//4. Pop all the elements off of the Stack. Every time a double is popped that is
 		//   between the two numbers entered by the user, print it to the screen.
 		if(num2 > num1) {
-		for (int i = 0; i < (num2 - num1); i++) {
-			System.out.println("Removed object is: " + intro.pop());
+		for (int i = 0; i < 100; i++) {
+			double pop = intro.pop();
+			if((pop > num1) && (pop < num2))
+			System.out.println("Removed object is: " + pop);
 		}
 		}
-		
-		else if (num2 < num1) {
-			for (int i = 0; i < (num1 - num2); i++) {
-				System.out.println("Removed object is: " + intro.pop());
-			}
-		}
+
 		//   EXAMPLE:
 		//   NUM 1: 65
 		//   NUM 2: 75
