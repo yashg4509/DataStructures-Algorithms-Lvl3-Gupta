@@ -90,7 +90,7 @@ public class DynamicIntegerArray {
 				specialCookie[i] = intArray[i];
 			}
 			
-			if(i>location) {
+			else if(i>location) {
 				specialCookie[i-1] = intArray[i];
 			}
 			
