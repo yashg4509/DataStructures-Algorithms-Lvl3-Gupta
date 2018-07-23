@@ -65,6 +65,9 @@ public class _02_TextUndoRedo implements KeyListener{
 			char y = deletedChars.pop();
 			label.setText(y + "");
 			}
+			else {
+				label.setText("");
+			}
 		}
 	}
 
