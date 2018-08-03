@@ -16,11 +16,13 @@ public class HangMan{
 	String[] content;
 	String word; 
 	JLabel label = new JLabel();
+	JLabel livesLbl = new JLabel();
 	JFrame frame = new JFrame();
 	JPanel pnl = new JPanel();
-	int lives;
+	int lives = 10;
 	
 	@SuppressWarnings("static-access")
+	
 	public void start() {
 		
 		@SuppressWarnings("static-access")
@@ -33,21 +35,23 @@ public class HangMan{
 			words.push(line);
 		}
 		
-		for (int i = 0; i < words.size(); i++) {
-			System.out.println(words.get(i));
-		}
+		
+//		for (int i = 0; i < words.size(); i++) {
+//			System.out.println(words.get(i));
+//		}
 	}
 	
 	void gameSetup() {
 		word = words.pop();
 		content = new String[word.length()];
 		
-		for (int i = 0; i < (word.length() - 1); i++) {
+		for (int i = 0; i < word.length(); i++) {
 			content[i] = "_ ";
 		}
 		
 		label.setText(contentToString());
 		pnl.add(label);
+		pnl.add(livesLbl);
 		frame.add(pnl);
 		frame.pack();
 		
@@ -57,18 +61,21 @@ public class HangMan{
 	}
 	
 	void game() {
-		lives = 10;
 		
-		for (int i = 0; i < lives; i++) {
+		for (int i = 0; i < 26; i++) {
 			String guess = JOptionPane.showInputDialog("Enter a guess: ");
 			guessCheck(guess);
+			livesLbl.setText("Lives: " + lives);
+			frame.pack();
 			
-			if(lives < 10) {
-				JOptionPane.showMessageDialog(null, "Eh.....BADDDD!!!");
+			
+			if(lives <= 0) {
+				JOptionPane.showMessageDialog(null, "Eh.....BADDDD!!! The word was: " + word);
+				System.exit(0);
 			}
 		}
+
 		
-//			
 //			for (int j = 0; j < guess.length(); j++) {
 //				if(word.contains(guess.charAt(j) + "")) {
 //					content[word.indexOf(guess.charAt(j) + "")] = guess.charAt(j) + "";
@@ -83,20 +90,36 @@ public class HangMan{
 	
 	public String contentToString() {
 		String str = "";
-		for (int i = 0; i < (content.length - 1); i++) {
+		for (int i = 0; i < content.length; i++) {
 			str += content[i];
 		}
 		return str;
 	}
 	
 	public void guessCheck(String guess) {
+		boolean isMatching = false;
 		for (int i = 0; i < word.length(); i++) {
 			char currentLetter = word.charAt(i);
 			if(currentLetter == guess.charAt(0)) {
+				isMatching = true;
 				content[i] = word.charAt(i) + "";
 				label.setText(contentToString());
 				frame.pack();
 			}
+		}
+		
+		if(!(isMatching)) {
+			lives--;
+		}
+		
+		String guessWord = "";
+		for (int i = 0; i < content.length; i++) {
+			guessWord += content[i];
+		}
+		
+		if(word.equals(guessWord)) {
+			JOptionPane.showMessageDialog(null, "Congrats! You aren't like Eric Pork!");
+			System.exit(0);
 		}
 	}
 	
