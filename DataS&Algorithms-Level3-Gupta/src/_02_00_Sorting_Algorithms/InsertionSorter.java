@@ -21,6 +21,7 @@ public class InsertionSorter extends Sorter {
 					array[j-1] = og;
 				}
 			}
+			display.updateDisplay();
 		}
 			//2. make another for loop that starts at i and counts down
         	//   while j is greater than 0
