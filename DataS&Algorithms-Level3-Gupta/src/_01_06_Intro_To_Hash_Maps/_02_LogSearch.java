@@ -64,10 +64,11 @@ public class _02_LogSearch implements ActionListener {
 		}
 		
 		if(e.getSource() == viewList) {
-			for (Integer i: hash.keySet()) {
-				String content = "ID: " + i + " Name: " + hash.get(i);
-				JOptionPane.showMessageDialog(null, content);
+			String content = "";
+			for(Integer i: hash.keySet()) {
+				content += "ID: " + i + " Name: " + hash.get(i) + "\n";
 			}
+			JOptionPane.showMessageDialog(null, content);
 		}
 	}
 	
