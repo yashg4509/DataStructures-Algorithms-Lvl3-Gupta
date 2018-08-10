@@ -1,4 +1,4 @@
-package _01_Searching_Algorithms;
+package _02_01_Searching_Algorithms;
 
 public class _00_LinearSearch {
 	// When finding the location of a certain element in an array, 

@@ -1,4 +1,4 @@
-package _01_Searching_Algorithms;
+package _02_01_Searching_Algorithms;
 
 public class _01_BinarySearch {
 	// Binary searches are good for sorted data because it

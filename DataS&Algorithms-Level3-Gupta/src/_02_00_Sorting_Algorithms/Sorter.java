@@ -1,4 +1,4 @@
-package _00_Sorting_Algorithms;
+package _02_00_Sorting_Algorithms;
 
 public abstract class Sorter {
 	public String type;

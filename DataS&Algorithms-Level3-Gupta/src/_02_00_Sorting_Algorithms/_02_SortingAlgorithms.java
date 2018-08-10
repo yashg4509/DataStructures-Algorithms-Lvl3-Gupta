@@ -1,4 +1,4 @@
-package _00_Sorting_Algorithms;
+package _02_00_Sorting_Algorithms;
 
 import javax.swing.JOptionPane;
 
