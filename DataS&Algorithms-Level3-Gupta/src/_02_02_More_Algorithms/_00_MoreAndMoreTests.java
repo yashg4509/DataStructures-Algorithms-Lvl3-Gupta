@@ -1,4 +1,4 @@
-package _02_More_Algorithms;
+package _02_02_More_Algorithms;
 
 import static org.junit.Assert.*;
 

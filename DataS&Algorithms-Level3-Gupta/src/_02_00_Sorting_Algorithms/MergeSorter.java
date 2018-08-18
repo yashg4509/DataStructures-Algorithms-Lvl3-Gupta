@@ -24,17 +24,15 @@ public class MergeSorter extends Sorter {
 		if(low < high) {
 			//3. Create an integer called middle and set it 
 			//   equal to the half way
-            int middle = array.length/2;
+            int middle = (low + high)/2;
             //4. call the mergeSort method with low and middle
            mergeSort(array, low, middle, display);
             //5. call the mergeSort method with middle + 1 and high
             mergeSort(array, middle + 1, high, display);
             //6. copy the elements from the array into the temporary array,
             //   but only the elements from low to high inclusive
-            for (int i = 0; i < array.length; i++) {
-            		if((i >= low) && (i <= high)) {
-            			array[i] = temp[i];
-            		}
+            for (int i = low; i < high + 1; i++) {
+	            temp[i] = array[i];
 			}
             //7. create three integers called i, j, and k and
             //   set them equal to low, middle + 1, and low respectively
@@ -73,12 +71,12 @@ public class MergeSorter extends Sorter {
             		k++;
             		i++;
             }
+            display.updateDisplay();
             	//18. set array at k equal to temp array at i
                 
                 //19. increase k and i by 1
                
 		}
-        display.updateDisplay();
 	}
 	
 }

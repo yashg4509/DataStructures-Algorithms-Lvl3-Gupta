@@ -8,8 +8,16 @@ public class _00_LinearSearch {
 		//1. Complete the method using a for loop to find the value
 		//   in the array. Return the location in the array
 		//   where the value was found.
+		for (int i = 0; i < words.length; i++) {
+			int valIndex;
+			
+			if(words[i].equals(value)) {
+				valIndex = i;
+				return valIndex;
+			}
+		}
 		//   If the value is not found in the array, return -1.
 		
-		return 0;
+		return -1;
 	}
 }

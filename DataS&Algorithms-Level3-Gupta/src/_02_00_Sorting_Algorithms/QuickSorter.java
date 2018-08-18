@@ -25,14 +25,15 @@ public class QuickSorter extends Sorter {
        int pivot = array[(low+high)/2];
         //4. make a while loop that goes while i is less than or equal to j
         while(i <= j) {
-        }
         	//5. make a while loop that increments i while 
         	//   the array element at i is less than pivot
-         while (i < pivot) {
+         while (array[i] < pivot) {
         	 	i++;
-        	 	
+         }
+         
         	 	while(array[j] > pivot) {
-        	 		j--;
+        	 		j = j-1;
+        	 	}
         	 		
         	 		if(i <= j) {
         	 			final int og = array[i];
@@ -40,17 +41,18 @@ public class QuickSorter extends Sorter {
         	 			array[j] = og;
         	 			
         	 			i++;
-        	 			j++;
+        	 			j--;
         	 		}
         	 		
         	 		if(low < j) {
-        	 			quickSort(array, low, high, display);
+        	 			quickSort(array, low, j, display);
         	 		}
         	 		
         	 		if(i < high) {
         	 			quickSort(array, i, high, display);
         	 		}
         	 	}
+        	 	display.updateDisplay();
          }
             //6. make a while loop that decrements j while 
         	//   the array element at j is greater than pivot
@@ -65,7 +67,6 @@ public class QuickSorter extends Sorter {
         
         //9. if i is less than high, call the quickSort method using
         //   i for the low and high for the high.
-         display.updateDisplay();
 	}
 
-}
+
